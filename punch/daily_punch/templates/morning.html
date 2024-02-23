@@ -1,0 +1,21 @@
+{% extends "home.html" %}
+{% block home %}
+{{ form.hidden_tag() }}
+  <h4>In time: {{ now_time }}</h4>
+  <div class="col form-group">
+    {{ form.discription.label(class="form-control-label") }} 
+    {% if form.discription.errors %}
+    {{ form.discription(class="form-control form-control-lg is-invalid") }}
+    <div>
+        {% for error in form.discription.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    {% else %}
+      {{ form.discription(class="form-control form-control-lg") }}
+    {% endif %}
+  </div>
+  <div class="form-group">
+    {{ form.submit(class="btn btn-outline-primary") }}
+  </div>
+{% endblock home %}

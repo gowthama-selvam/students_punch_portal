@@ -1,0 +1,24 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+<form method="POST" action="">
+    <fieldset class="form-group container">
+        <h3 class="form-group">Export data</h3>
+        <div class="form-group borderLeft">
+            <input type="checkbox" name="mychechbox" value="intime"> Intime
+        </div>
+        <div class="form-group borderLeft">
+            <input type="checkbox" name="mychechbox" value="outtime"> Outtime
+        </div>
+        <div class="form-group borderLeft">
+            <input type="checkbox" name="mychechbox" value="user"> User list
+        </div>
+        <div class="form-group borderLeft">
+            <input type="submit" class="btn btn-secondary form-group" value="Export">
+        </div>
+        
+    </fieldset>
+</form>
+
+{% endblock %}
